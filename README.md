@@ -30,3 +30,8 @@ cmake -S . -B build
 1. Go in Settings (either Global or Instance), then go in the Java section.
 2. Set Java Runtime/Tick and set Java Installation to the location of the minecraft-runtime script, in my case, `/opt/lwjgl3/minecraft-runtime`
 3. Click Test, if you did everything correctly, it should say that the Test succeeded.
+
+## Sources
+- [https://github.com/LWJGL/lwjgl3/issues/421](https://github.com/LWJGL/lwjgl3/issues/421)
+- [https://forums.freebsd.org/threads/latest-minecraft-on-freebsd.78774/](https://forums.freebsd.org/threads/latest-minecraft-on-freebsd.78774/)
+- [https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=253021#c4](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=253021)
