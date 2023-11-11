@@ -4,7 +4,7 @@
 
 We will mostly be following the OpenBSD build instructions at [https://prismlauncher.org/wiki/development/build-instructions/#openbsd](https://prismlauncher.org/wiki/development/build-instructions/#openbsd).
 
-0. Install Dependancies: `sudo pkg install qt5 qt6 cmake openjdk8 openjdk17 lwjgl glfw git`
+0. Install Dependancies: `sudo pkg install qt5 qt6 cmake kf5-cmake-extra-modules openjdk8 openjdk17 lwjgl glfw git`
 1. Clone the repo: `git clone --recursive https://github.com/PrismLauncher/PrismLauncher.git` and `cd PrismLauncher`
 2. Configure environment: 
 ``
