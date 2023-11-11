@@ -1,4 +1,15 @@
-# minecraft-freebsd: Getting Started
+# Minecraft 1.20.2 on FreeBSD: Getting Started
+
+## This repository uses LWJG from [#431](https://github.com/LWJGL/lwjgl3/issues/421#issuecomment-1793764434).
+
+**Thanks their work!**
+
+*with the build versions of [er2off](https://github.com/er2off)  used here*
+
+
+You will now be able to run minecraft 1.20.2 on FreeBSD.
+
+And **minecraft will be able to recognize multiple cpu cores!**(for me, only 1.20.2 now, you maybe want Check the link above)
 
 ## Setting up Prism Launcher
 
@@ -16,19 +27,44 @@ cmake -S . -B build
 ``
 3. Actually build Prism Launcher: `cd build` and `sudo make -j$(nproc) install`
 
-## Setting up LWJGL3
+## Building LWJGL3 and configuring script
 
-*If you're planing to run <1.12 then you probably won't need this, but if running it does not work then follow this guide for it too.*
+**For FreeBSD 13.2+ or other version:**
 
-### Library Setup
-1. Download [lwjgl-3.2.3.1-freebsd.tar](/lwjgl-3.2.3.1-freebsd.tar) and extract it somewhere. For this guide I'll extract it to `/opt/lwjgl3/`, there should be a folder called `bin` and a script called `minecraft-runtime` there.
-2. Open `/opt/lwjgl3/minecraft-runtime` in a text editor, you will need to most probably modify 2 values near the top.
-3. Set the `ROOT` variable in minecraft-runtime to the location where you extracted LWJGL3, in my case, it would be `ROOT=/opt/lwjgl3/`
-4. `JAVA_HOME` should already be set correctly, but if its not, set it to `export JAVA_HOME=/usr/local/openjdk17`
+Before get start, you maybe want to check [this](https://github.com/LWJGL/lwjgl3/issues/421).
+
+---
+
+1. Dowload [lwjgl3.tar.gz](https://github.com/Spokzooy/minecraft-freebsd/blob/main/lwjgl3.tar.gz) and extract it somewhere.
+2. Go to the folder you exported, `make install clean`
+3. If build success, you should be able to find the built files in the following path:
+
+	`/usr/local/lib/lwjgl3`
+
+	`/usr/local/share/java/classes/lwjgl3`
+
+	This should be correct for FreeBSD 13.2,
+	But if not, open `minecraft-runtime` in a text editor, modify it:
+
+	`LWJGL_JLP_OVRD`
+
+	`LWJGL_OVRD`
+
+	`LWJGL_OGL_OVRD`
+
+	`LWJGL_OAL_OVRD`
+
+	`LWJGL_GLFW_OVRD`
+
+	`LWJGL_STB_OVRD`
+
+	`LWJGL_JEM_OVRD`
+
+---
 
 ### Configuring Prism
 1. Go in Settings (either Global or Instance), then go in the Java section.
-2. Set Java Runtime/Tick and set Java Installation to the location of the minecraft-runtime script, in my case, `/opt/lwjgl3/minecraft-runtime`
+2. Set Java Runtime/Tick and set Java Installation to the location of the minecraft-runtime script.
 3. Click Test, if you did everything correctly, it should say that the Test succeeded.
 
 ## Sources
