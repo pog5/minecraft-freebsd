@@ -2,20 +2,20 @@
 
 ## This repository uses LWJG from [#431](https://github.com/LWJGL/lwjgl3/issues/421#issuecomment-1793764434).
 
-**Thanks their work!**
+**Thanks to their work!**
 
 *with the build versions of [er2off](https://github.com/er2off)  used here*
 
 
-You will now be able to run minecraft 1.20.2 on FreeBSD.
+You will now be able to run Minecraft 1.20.2 on FreeBSD.
 
-And **minecraft will be able to recognize multiple cpu cores!**(for me, only 1.20.2 now, you maybe want Check the link above)
+And **Minecraft will be able to recognize multiple cpu cores!**(for me, only 1.20.2 now, you maybe want Check the link above)
 
 ## Setting up Prism Launcher
 
 We will mostly be following the OpenBSD build instructions at [https://prismlauncher.org/wiki/development/build-instructions/#openbsd](https://prismlauncher.org/wiki/development/build-instructions/#openbsd).
 
-0. Install Dependancies: `sudo pkg install qt5 qt6 cmake kf5-cmake-extra-modules openjdk8 openjdk17 lwjgl glfw git`
+0. Install Dependencies: `sudo pkg install qt5 qt6 cmake kf5-cmake-extra-modules openjdk8 openjdk17 lwjgl glfw git`
 1. Clone the repo: `git clone --recursive https://github.com/PrismLauncher/PrismLauncher.git` and `cd PrismLauncher`
 2. Configure environment: 
 ``
@@ -31,13 +31,13 @@ cmake -S . -B build
 
 **For FreeBSD 13.2+ or other version:**
 
-Before get start, you maybe want to check [this](https://github.com/LWJGL/lwjgl3/issues/421).
+Before we get started, you might want to check [this](https://github.com/LWJGL/lwjgl3/issues/421).
 
 ---
 
-1. Dowload [lwjgl3.tar.gz](https://github.com/Spokzooy/minecraft-freebsd/blob/main/lwjgl3.tar.gz) and extract it somewhere.
-2. Go to the folder you exported, `make install clean`
-3. If build success, you should be able to find the built files in the following path:
+1. Download [lwjgl3.tar.gz](https://github.com/Spokzooy/minecraft-freebsd/blob/main/lwjgl3.tar.gz) and extract it somewhere.
+2. Go to the folder you extracted, `make install clean`
+3. If the build succeeds, you should be able to find the built files in the following path:
 
 	`/usr/local/lib/lwjgl3`
 
@@ -63,7 +63,7 @@ Before get start, you maybe want to check [this](https://github.com/LWJGL/lwjgl3
 ---
 
 ### Configuring Prism
-1. Go in Settings (either Global or Instance), then go in the Java section.
+1. Go to Settings (either Global or Instance), then go in the Java section.
 2. Set Java Runtime/Tick and set Java Installation to the location of the minecraft-runtime script.
 3. Click Test, if you did everything correctly, it should say that the Test succeeded.
 
