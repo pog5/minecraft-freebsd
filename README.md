@@ -2,7 +2,7 @@
 
 ## This repository uses LWJG from [#431](https://github.com/LWJGL/lwjgl3/issues/421#issuecomment-1793764434).
 
-**Thanks their work!**
+**Thanks to their work!**
 
 *with the build versions of [er2off](https://github.com/er2off)  used here*
 
@@ -31,7 +31,7 @@ cmake -S . -B build
 
 **For FreeBSD 13.2+ or other version:**
 
-Before get started, you maybe want to check [this](https://github.com/LWJGL/lwjgl3/issues/421).
+Before we get started, you might want to check [this](https://github.com/LWJGL/lwjgl3/issues/421).
 
 ---
 
