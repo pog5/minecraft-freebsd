@@ -67,6 +67,9 @@ Before we get started, you might want to check [this](https://github.com/LWJGL/l
 2. Set Java Runtime/Tick and set Java Installation to the location of the minecraft-runtime script.
 3. Click Test, if you did everything correctly, it should say that the Test succeeded.
 
+## IMPORTANT: FOR PEOPLE RUNNING SNAPSHOTS OF 1.13 AND LOWER:
+You need to add `-Dorg.lwjgl.librarypath=/usr/local/lib/lwjgl` as a additional flag (Thanks to @er2off on Discord for this info.)
+
 ## Sources
 - [https://github.com/LWJGL/lwjgl3/issues/421](https://github.com/LWJGL/lwjgl3/issues/421)
 - [https://forums.freebsd.org/threads/latest-minecraft-on-freebsd.78774/](https://forums.freebsd.org/threads/latest-minecraft-on-freebsd.78774/)
