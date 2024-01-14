@@ -1,11 +1,12 @@
 # Minecraft 1.20.2 on FreeBSD: Getting Started
 
-## This repository uses LWJG from [#431](https://github.com/LWJGL/lwjgl3/issues/421#issuecomment-1793764434).
+### This repository uses LWJG from [#431](https://github.com/LWJGL/lwjgl3/issues/421#issuecomment-1793764434).
+
+## If you are affected by https://github.com/pog5/minecraft-freebsd/issues/8, use [lwjgl-3.2.3.1-freebsd.tar](lwjgl-3.2.3.1-freebsd.tar) instead of the normal one!
 
 **Thanks to their work!**
 
 *with the build versions of [er2off](https://github.com/er2off)  used here*
-
 
 You will now be able to run Minecraft 1.20.2 on FreeBSD.
 
