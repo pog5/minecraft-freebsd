@@ -2,7 +2,7 @@
 
 ### This repository uses LWJG from [#431](https://github.com/LWJGL/lwjgl3/issues/421#issuecomment-1793764434).
 
-## If you are affected by https://github.com/pog5/minecraft-freebsd/issues/8, use [lwjgl-3.2.3.1-freebsd.tar](lwjgl-3.2.3.1-freebsd.tar) instead of the normal one!
+## If you are affected by https://github.com/pog5/minecraft-freebsd/issues/8, use [this version of the repo](https://github.com/pog5/minecraft-freebsd/tree/b7bc8cbdd43864a2cabd4021e87f9f7e8c6d3838) instead of the normal one!
 
 **Thanks to their work!**
 
