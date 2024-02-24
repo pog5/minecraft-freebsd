@@ -65,7 +65,7 @@ Before we get started, you might want to check [this](https://github.com/LWJGL/l
 
 ### Configuring Prism
 1. Go to Settings (either Global or Instance), then go in the Java section.
-2. Set Java Runtime/Tick and set Java Installation to the location of the minecraft-runtime script.
+2. Set Java Runtime/Tick and set Java Installation to the location of the minecraft-runtime script from the `make install` step above this one.
 3. Click Test, if you did everything correctly, it should say that the Test succeeded.
 
 ## IMPORTANT: FOR PEOPLE RUNNING SNAPSHOTS OF 1.13 AND LOWER:
