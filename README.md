@@ -36,7 +36,7 @@ Before we get started, you might want to check [this](https://github.com/LWJGL/l
 
 ---
 
-1. Download [lwjgl3.tar.gz](https://github.com/Spokzooy/minecraft-freebsd/blob/main/lwjgl3.tar.gz) and extract it somewhere.
+1. Download [lwjgl3.tar.gz](lwjgl3.tar.gz) and extract it somewhere.
 2. Go to the folder you extracted, `make install clean`
 3. If the build succeeds, you should be able to find the built files in the following path:
 
