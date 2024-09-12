@@ -1,4 +1,4 @@
-# Minecraft 1.20.2 on FreeBSD: Getting Started
+# Minecraft 1.20.2+ on FreeBSD: Getting Started
 
 ### This repository uses LWJG from [#431](https://github.com/LWJGL/lwjgl3/issues/421#issuecomment-1793764434).
 
@@ -8,7 +8,7 @@
 
 *with the build versions of [er2off](https://github.com/er2off)  used here*
 
-You will now be able to run Minecraft 1.20.2 on FreeBSD.
+You will now be able to run Minecraft 1.20.2+ on FreeBSD.
 
 And **Minecraft will be able to recognize multiple cpu cores!**(for me, only 1.20.2 now, you maybe want Check the link above)
 
@@ -32,6 +32,9 @@ cmake -S . -B build
 
 **For FreeBSD 13.2+ or other version:**
 
+<details>
+	<summary>Try installing `games/lwjgl3` from ports first, if that doesn't work, follow this: </summary>
+	
 Before we get started, you might want to check [this](https://github.com/LWJGL/lwjgl3/issues/421).
 
 ---
@@ -63,10 +66,50 @@ Before we get started, you might want to check [this](https://github.com/LWJGL/l
 
 ---
 
+
 ### Configuring Prism
 1. Go to Settings (either Global or Instance), then go in the Java section.
 2. Set Java Runtime/Tick and set Java Installation to the location of the minecraft-runtime script from the `make install` step above this one.
 3. Click Test, if you did everything correctly, it should say that the Test succeeded.
+
+</details>
+
+<details>
+	<summary>Alternative Solution:</summary>
+<quote>Qutoed from https://github.com/pog5/minecraft-freebsd/issues/8?notification_referrer_id=NT_kwDOA7VwZLM4NzA5Njk5ODcyOjYyMjIyNDM2#issuecomment-2031646216:</quote>
+
+ 
+ @Gamer100Dev's solution worked for me. 
+
+Yes, I'm on FreeBSD 14.0 RELEASE
+
+To be clearer, git clone https://github.com/LWGJL/lwjgl3.
+
+- Download https://github.com/pog5/minecraft-freebsd/blob/main/lwjgl3.tar.gz
+
+- Extract the tar.gz file
+
+- Copy the "Makefile" from the extracted tar.gz file into where you cloned lwjgl3; overwriting the original
+
+- Run this command inside of the lwjgl3 dir that you cloned:
+
+`/usr/local/bin/cmake -E env JAVACMD=/usr/local/openjdk17/bin/java JAVA8_HOME=/usr/local/openjdk8 ant all && /usr/local/bin/cmake -E env JAVACMD=/usr/local/openjdk17/bin/java JAVA8_HOME=/usr/local/openjdk8 ant release -Dbuild.offline=yes -Djavadoc.skip=yes`
+
+- Run: `# mkdir /usr/local/share/java/classes/lwjgl3 /usr/local/lib/lwjgl3`
+
+- Run: `# find /PATH/TO/GIT/lwjgl3 -name "*.so" -exec cp {} /usr/local/lib/lwjgl3/ \;`
+
+- Run: `find /PATH/TO/GIT/lwjgl3 -name "*.jar" -exec cp {} /usr/local/share/java/classes/lwjgl3/ \;`
+
+- Install minecraft-client & openjdk17-jre:
+`# pkg install minecraft-client openjdk17-jre`
+
+- Overwrite the original minecraft-runtime file with the one from the extracted tar: 
+`# cp /PATH/TO/EXTRACTED/TAR/lwjgl3/minecraft-runtime /usr/loca/share/minecraft-client/minecraft-runtime`
+
+- In PrismLauncher, go to `Settings` > `Java` and set "Java Path" to:
+`/usr/local/share/minecraft-client/minecraft-runtime`
+</details>
 
 ## IMPORTANT: FOR PEOPLE RUNNING SNAPSHOTS OF 1.13 AND LOWER:
 You need to add `-Dorg.lwjgl.librarypath=/usr/local/lib/lwjgl` as a additional flag (Thanks to @er2off on Discord for this info.)
